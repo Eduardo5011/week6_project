@@ -1,0 +1,13 @@
+{% extends 'base.html.j2'%}
+
+{% block content %}
+<div class="card">
+  <h4 class="card-header">YOur order was a success</h4>
+  <div class="card-body">
+    <p class="card-title">You will receive an email shortly</p>
+    <a href="{{url_for('main.students')}}" class="btn btn-primary">Return to the shop</a>
+  </div>
+</div>
+
+
+{% endblock %}

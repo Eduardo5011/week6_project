@@ -1,19 +1,13 @@
-{% extends 'base.html.j2' %}
+{% extends 'base.html.j2'%}
 
 {% block css %}
 <link rel="stylesheet" href="{{url_for('static',filename='css/selection.css')}}">
-{% endblock %}
 
-{% block title %}
-  My Market
 {% endblock %}
 
 {% block content %}
 
-
-
-  {# -------------------------------#}
-  <div class="container-fluid mt-5 mb-5">
+<div class="container-fluid mt-5 mb-5">
     <div class="row g-2">
         <div class="col-md-3">
             <div class="t-products p-2">
@@ -52,7 +46,7 @@
             </div>
             <div class="type p-2 mb-1">
                 <div class="heading d-flex justify-content-between align-items-center">
-                    <a href="#" class="btn btn-dark">Icons</a>
+                    <a href="{{url_for('shop.category3')}}" class="btn btn-dark">Icons</a>
                 </div>
                 <div class="d-flex justify-content-between mt-2">
                     <div class="form-check">   </label> </div> <span></span>
@@ -70,14 +64,16 @@
             <div class="row g-2">
                 <div class="col-md-4">
                     <div class="product py-4"> <span ></span>
-                        <div class="text-center"> <img src="static/images/chucky.jpg" height="200" width="200"> </div>
+                    <!-- <span class="off bg-success">-25% OFF</span> -->
+                        <div class="text-center"> <img src="static/images/chainsaw.jpg" height="200" width="200"> </div>
                         <div class="about text-center">
-                            <h5>gOOD gUY Doll</h5> <span>$1,999.99</span>
-                            <p>Hi im Chuck. Wanna play?</p>
+                            <h5>Groovy chainsaw</h5> <span>$2,999.99</span>
+                            <p>Ash's trusty weapon. slayed plenty of demons</p>
                             <a href="{{url_for('shop.view')}}">View Item</a>
                         </div>
-                        <div class="cart-button mt-3 px-2 d-flex justify-content-between align-items-center"> <a href="{{url_for('shop.cart')}}" class="btn btn-primary text-uppercase">Add to cart</a>
+                        <div class="cart-button mt-3 px-2 d-flex justify-content-between align-items-center"> <a  href="{{url_for('shop.cart')}}" class="btn btn-primary text-uppercase">Add to cart</a>
                             <div class="add"> <span><i class="fa fa-heart-o"></i></span> <span ><i class="fa fa-opencart"></i></span> </div>
+                       
                         </div>
                     </div>
                 </div>
@@ -96,20 +92,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="product py-4">
-                        <div class="text-center"> <img src="static/images/mask.png" height="200" width="200"> </div>
-                        <div class="about text-center">
-                            <h5>MM mask</h5> <span>$1,999.99</span>
-                            <p>Once on you can hear the screams and a burning smell</p>
-                            <a href="{{url_for('shop.view')}}">View Item</a>
-                        </div>
-                        <div class="cart-button mt-3 px-2 d-flex justify-content-between align-items-center"> <a href="{{url_for('shop.cart')}}" class="btn btn-primary text-uppercase">Add to cart</a>
-                            <div class="add"> <span><i class="fa fa-heart-o"></i></span> <span ><i class="fa fa-opencart"></i></span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product py-4"> <span></span>
-                        <div class="text-center"> <img src="static/images/machete.jpg" height="200" width="200"> </div>
+                    <div class="text-center"> <img src="static/images/machete.jpg" height="200" width="200"> </div>
                         <div class="about text-center">
                             <h5>Jason machete</h5> <span>$1,245.89</span>
                             <p>FOund in silver lake. I wonder who owned it.</p>
@@ -117,6 +100,13 @@
                         </div>
                         <div class="cart-button mt-3 px-2 d-flex justify-content-between align-items-center"> <a href="{{url_for('shop.cart')}}" class="btn btn-primary text-uppercase">Add to cart</a>
                             <div class="add"> <span><i class="fa fa-heart-o"></i></span> <span ><i class="fa fa-opencart"></i></span> </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product py-4"> <span></span>
+                        
                         </div>
                     </div>
                 </div>
@@ -135,28 +125,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="product py-4"> <span ></span>
-                        <div class="text-center"> <img src="static/images/leprechaun.jpg" width="200"> </div>
-                        <div class="about text-center">
-                            <h5>Leprechaun Coin</h5> <span>$999.99</span>
-                            <p>If you take his gold. Prepare to fear his wrath</p>
-                            <a href="{{url_for('shop.view')}}">View Item</a>
-                        </div>
-                        <div class="cart-button mt-3 px-2 d-flex justify-content-between align-items-center"> <a href="{{url_for('shop.cart')}}" class="btn btn-primary text-uppercase">Add to cart</a>
-                            <div class="add"> <span><i class="fa fa-heart-o"></i></span> <span ><i class="fa fa-opencart"></i></span> </div>
+                  
+                        
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="product py-4"> <span></span>
-                        <div class="text-center"> <img src="static/images/annabelle.jpg" width="200"> </div>
-                        <div class="about text-center">
-                            <h5>Annabelle</h5> <span>$3,999.99</span>
-                            <p>devilish in the inside, scarier on the outside</p>
-                            <a href="{{url_for('shop.view')}}">View Item</a>
-                        </div>
-                        <div class="cart-button mt-3 px-2 d-flex justify-content-between align-items-center"> <a href="{{url_for('shop.cart')}}" class="btn btn-primary text-uppercase">Add to cart</a>
-                            <div > <span ><i ></i></span> <span ><i></i></span> </div>
+                   
                         </div>
                     </div>
                 </div>
@@ -170,4 +145,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}

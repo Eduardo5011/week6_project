@@ -7,6 +7,25 @@ from flask_login import login_required
 
 from .import bp as shop
 
+@shop.route('/category3', methods=['GET'])  
+@login_required
+def category3():
+    return render_template('category3.html.j2') 
+
+@shop.route('/category2', methods=['GET'])  
+@login_required
+def category2():
+    return render_template('category2.html.j2') 
+
+@shop.route('/category', methods=['GET'])  
+@login_required
+def category():
+    return render_template('category.html.j2') 
+
+@shop.route('/success', methods=['GET'])  
+@login_required
+def success():
+    return render_template('specific.html.j2') 
 
 @shop.route('/view', methods=['GET'])  
 @login_required
@@ -16,7 +35,7 @@ def view():
 @shop.route('/cart', methods=['GET'])  
 @login_required  
 def cart():
-    return render_template('cart.html.j2')
+    return render_template('checkout.html.j2')
 
 
 @shop.route('/checkout', methods=['GET'])
